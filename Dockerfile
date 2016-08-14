@@ -15,6 +15,8 @@
 FROM node
 MAINTAINER Philippe Mulet "philippe_mulet@fr.ibm.com"
 
+RUN apt-get update &&\
+
 # Install the application
 ADD package.json /app/package.json
 RUN cd /app && npm install  
